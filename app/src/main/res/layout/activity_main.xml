@@ -6,68 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/tip"
-        android:layout_width="64dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="8dp"
-        android:text="username"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/tip2"
-        app:layout_constraintTop_toTopOf="@+id/Username" />
-
-
-    <TextView
-        android:id="@+id/tip2"
-        android:layout_width="64dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="8dp"
-        android:text="password"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/Password" />
-
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="201dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toEndOf="@+id/tip2"
-        app:layout_constraintTop_toBottomOf="@+id/Username" />
-
-    <EditText
-        android:id="@+id/Username"
-        android:layout_width="201dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="100dp"
-        android:background="@drawable/textview_border"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintStart_toEndOf="@+id/tip"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/Create"
-        android:layout_width="111dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="157dp"
-        android:layout_marginTop="60dp"
-        android:text="Login"
+        android:layout_width="339dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="252dp"
+        android:text="CREATE  A NEW ADVERT"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Password" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/Signup"
-        android:layout_width="111dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="28dp"
-        android:text="Sign up"
+        android:id="@+id/Show"
+        android:layout_width="339dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:text="SHOW ALL LOST AND FOUND ITEMS "
         app:layout_constraintStart_toStartOf="@+id/Create"
         app:layout_constraintTop_toBottomOf="@+id/Create" />
 

@@ -15,26 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Task61D">
         <activity
-            android:name=".Myorder"
+            android:name=".Order"
             android:exported="false" />
         <activity
             android:name=".Orderdetail"
             android:exported="false" />
         <activity
-            android:name=".Createorder2"
+            android:name=".Create"
             android:exported="false" />
-        <activity
-            android:name=".Createorder"
-            android:exported="false" />
-        <activity
-            android:name=".Account"
-            android:exported="false" />
-        <activity
-            android:name=".Home"
-            android:exported="true" />
-        <activity
-            android:name=".Signupactivity"
-            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

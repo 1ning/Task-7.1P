@@ -8,36 +8,17 @@ import android.widget.Toast;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String sqlStatements = "create table user ("
-            + "id integer primary key autoincrement, "
-            + "username text, "
-            + "password text, "
-            + "phonenumber integer, "
-            + "photo blob, "
-            + "fullname text)";
-    private static final String CREATE_trucks = "create table truck ("
-            + "id integer primary key autoincrement,"
-            + "type text,"
-            + "context text)";
+
 
     private static final String CREATE_orders = "create table orders ("
             + "id integer primary key autoincrement,"
-            + "year integer,"
-            + "month integer,"
-            + "day integer,"
-            + "hour integer,"
-            + "minute integer,"
-            + "itemtype text,"
-            + "cartype text,"
-            + "weight double,"
-            + "width double,"
-            + "receiver text,"
-            + "height double,"
-            + "length double,"
-            + "receiver text,"
-            + "location text,"
-            + "quantity integer,"
-            + "userid integer)";
+            + "name text, "
+            + "location text, "
+            + "phone text, "
+            + "type text, "
+            + "data text, "
+            + "description text)";
+
 
     private Context context;
 
@@ -48,8 +29,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(sqlStatements);
-        db.execSQL(CREATE_trucks);
         db.execSQL(CREATE_orders);
     }
 
