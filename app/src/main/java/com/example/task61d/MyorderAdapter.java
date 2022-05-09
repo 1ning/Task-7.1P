@@ -24,12 +24,12 @@ import java.util.List;
 
 
 public class MyorderAdapter extends RecyclerView.Adapter<MyorderAdapter.MyViewHolder> {
-    private List<String> list;
+    private List<item> list;
     private View inflater;
     private Context mContext;
 
 
-    public MyorderAdapter(Context context, List<String> list) {
+    public MyorderAdapter(Context context, List<item> list) {
         this.list = list;
         mContext = context;
     }
@@ -45,8 +45,8 @@ public class MyorderAdapter extends RecyclerView.Adapter<MyorderAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        holder.title.setText(list.get(position));
-        holder.id= String.valueOf(position);
+        holder.title.setText(list.get(position).thing);
+        holder.id=list.get(position).id;
     }
 
     @Override
@@ -67,7 +67,6 @@ public class MyorderAdapter extends RecyclerView.Adapter<MyorderAdapter.MyViewHo
                  Global.id=id;
                     Intent intent=new Intent(mContext,Orderdetail.class);
                     mContext.startActivity(intent);
-                    ((Activity)mContext).finish();
                 }
             });
         }

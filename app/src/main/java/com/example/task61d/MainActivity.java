@@ -11,17 +11,14 @@ import android.widget.Button;
 import com.example.task61d.Database.DatabaseHelper;
 
 public class MainActivity extends AppCompatActivity {
-    private DatabaseHelper dbHelper;
     Button Create;
     Button Show;
-    private SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Create=(Button)findViewById(R.id.Create);
         Show=(Button)findViewById(R.id.Show);
-        dbHelper= new DatabaseHelper(this, "database2", null, 1);
         Create.setOnClickListener(new View.OnClickListener() {
         public void onClick(View view) {
                     Intent intent=new Intent(MainActivity.this,Create.class);

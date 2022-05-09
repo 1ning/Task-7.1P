@@ -36,7 +36,7 @@ public class Order extends AppCompatActivity {
         mRecyclerView = findViewById(R.id.recycler_view);
         create=findViewById(R.id.Create);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        List<String> list = queryAllData();
+        List<item> list = queryAllData();
         if (this != null) {
             MyorderAdapter myorderAdapter = new MyorderAdapter(this, list);
             mRecyclerView.setAdapter(myorderAdapter);
@@ -45,18 +45,21 @@ public class Order extends AppCompatActivity {
     }
 
 
-    public List<String> queryAllData(){
+    public List<item> queryAllData(){
         Cursor cursor = db.query("orders",null,null,null,null,null,null);
-        List<String> list = new ArrayList<>();
+        List<item> list = new ArrayList<>();
         if(cursor.getCount() > 0)
         {
             cursor.moveToFirst();
             for (int i = 0; i < cursor.getCount(); i++) {
                 String type = cursor.getString(cursor.getColumnIndexOrThrow("type"));
                 String name = cursor.getString(cursor.getColumnIndexOrThrow("name"));
-                Global.id=cursor.getString(cursor.getColumnIndexOrThrow("id"));
+                String id = cursor.getString(cursor.getColumnIndexOrThrow("id"));
                 String thing=type+" "+name;
-                list.add(thing);
+                item item=new item();
+                item.thing=thing;
+                item.id=id;
+                list.add(item);
                 cursor.moveToNext();
             }
         }
